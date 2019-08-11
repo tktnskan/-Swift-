@@ -114,6 +114,20 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let tabBar = self.tabBarController?.tabBar
+        tabBar?.isHidden = (tabBar?.isHidden == true) ? false : true
+        
+//        func exec() {
+//            tabBar?.alpha = ( tabBar?.alpha == 1 ? 0: 1)
+//        }
+//
+//        UIView.animate(withDuration: TimeInterval(0.3), animations: exec)
+        
+        UIView.animate(withDuration: TimeInterval(0.3) ) {
+            tabBar?.alpha = ( tabBar?.alpha == 0 ? 1 : 0)
+        }
+    }
     
 }
 
