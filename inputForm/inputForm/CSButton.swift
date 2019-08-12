@@ -8,7 +8,13 @@
 
 import UIKit
 
+public enum CSButtonType {
+    case rect
+    case circle
+}
+
 class CSButton: UIButton {
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -35,4 +41,56 @@ class CSButton: UIButton {
         self.layer.borderColor = UIColor.black.cgColor
         self.setTitle("버튼", for: .normal)
     }
+    
+    convenience init(type: CSButtonType){
+        self.init()
+        switch type {
+        case .rect:
+            self.backgroundColor = .black
+            self.layer.borderColor = UIColor.red.cgColor
+            self.layer.borderWidth = 2
+            self.layer.cornerRadius = 0
+            self.setTitleColor(.white, for: .normal)
+            self.setTitle("Rect Button", for: .normal)
+            
+        case .circle:
+            self.backgroundColor = .black
+            self.layer.borderColor = UIColor.red.cgColor
+            self.layer.borderWidth = 2
+            self.layer.cornerRadius = 50
+            self.setTitle("Circle Button", for: .normal)
+        }
+        
+        self.addTarget(self, action: #selector(counting(_:)), for: .touchUpInside)
+        
+    }
+    
+    var style: CSButtonType = .rect {
+        didSet {  // 프로퍼티 옵저버
+            switch style {
+                case .rect:
+                    self.backgroundColor = .black
+                    self.layer.borderColor = UIColor.red.cgColor
+                    self.layer.borderWidth = 2
+                    self.layer.cornerRadius = 0
+                    self.setTitleColor(.white, for: .normal)
+                    self.setTitle("Rect Button", for: .normal)
+                
+                case .circle:
+                    self.backgroundColor = .black
+                    self.layer.borderColor = UIColor.red.cgColor
+                    self.layer.borderWidth = 2
+                    self.layer.cornerRadius = 50
+                    self.setTitle("Circle Button", for: .normal)
+            }
+        }
+    }
+    
+    @objc
+    func counting(_ sender: UIButton) {
+        sender.tag = sender.tag + 1
+        sender.setTitle("\(sender.tag)번 클릭", for: .normal)
+    }
 }
+
+

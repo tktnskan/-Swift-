@@ -15,9 +15,11 @@ class ThirdVC: UIViewController {
         
         self.setButton()
 //        self.alertGo((Any).self)
-        let csBtn = CSButton(frame: CGRect(x: 30, y: 100, width: 150, height: 30))
+        let csBtn = CSButton(type: .rect)
+        csBtn.frame = CGRect(x: 30, y: 100, width: 150, height: 30)
+        csBtn.style = .circle
         
-        let csBtn2 = CSButton()
+        let csBtn2 = CSButton(type: .circle)
         csBtn2.frame = CGRect(x: 180, y: 100, width: 150, height: 30)
         
         let title = UILabel(frame: CGRect(x: 0, y: 130, width: 100, height: 30))
