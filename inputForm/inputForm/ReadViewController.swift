@@ -28,7 +28,7 @@ class ReadViewController: UIViewController {
         interval.frame = CGRect(x: 50, y: 200, width: 300, height: 30)
         
         email.text = "전달받은 이메일 : \( self.pEmail! )"
-        update.text = "업데이트 여부 : \( self.pUpdate == true ? "업데이트 함" : "업데이트 안함")"
+        update.text = "업데이트 여부 : \( self.pUpdate == true ? "업데이트 함" : "업데이트 안함" )"
         interval.text = "업데이트 주기 : \( self.pInterval! )분마다"
         
         self.view.addSubview(email)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstVC: UIViewController {
     var paramEmail: UITextField!
     var paramUpdate: UISwitch!
     var paramInterval: UIStepper!
@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        let title = UILabel(frame: CGRect(x: 0, y: 100, width: 100, height: 30))
+//        self.initTitle()
+        self.initTitleNew()
+        
+        let title = UILabel(frame: CGRect(x: 0, y: 130, width: 100, height: 30))
         
         title.text = "첫 번쨰 탭"
         title.textColor = UIColor.red
@@ -127,6 +130,48 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: TimeInterval(0.3) ) {
             tabBar?.alpha = ( tabBar?.alpha == 0 ? 1 : 0)
         }
+    }
+    
+//
+//    func initTitle() {
+//        let nTitle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+//
+//        nTitle.numberOfLines = 2
+//        nTitle.textAlignment = .center
+//        nTitle.font = UIFont.systemFont(ofSize: 15)
+//        nTitle.text = "58개 숙소 \n 1박(1월 10일 ~ 1월 11일)"
+//        nTitle.textColor = UIColor.white
+//
+//        self.navigationItem.titleView = nTitle
+//
+//        self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0.02, green: 0.22, blue: 0.49, alpha: 1.0)
+//    }
+//
+    func initTitleNew() {
+        let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 36))
+        let topTitle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 18))
+        
+        topTitle.numberOfLines = 1
+        topTitle.textAlignment = .center
+        topTitle.font = UIFont.systemFont(ofSize: 15)
+        topTitle.textColor = UIColor.white
+        topTitle.text = "58개 숙소"
+        
+        let subTitle = UILabel(frame: CGRect(x: 0, y: 18, width: 200, height: 18))
+        
+        subTitle.numberOfLines = 1
+        subTitle.textAlignment = .center
+        subTitle.font = UIFont.systemFont(ofSize: 12)
+        subTitle.textColor = UIColor.white
+        subTitle.text = "1박(1월 10일 ~ 1월 11일)"
+        
+        
+        containerView.addSubview(topTitle)
+        containerView.addSubview(subTitle)
+        
+        self.navigationItem.titleView = containerView
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0.02, green: 0.22, blue: 0.49, alpha: 1.0)
     }
     
 }

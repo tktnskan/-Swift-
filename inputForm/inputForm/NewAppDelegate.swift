@@ -19,11 +19,19 @@ class NewAPpDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = tbC
         
-        let view01 = ViewController()
+        let nC1 = UINavigationController()
+        let nC2 = UINavigationController()
+        let nC3 = UINavigationController()
+        
+        let view01 = FirstVC()
         let view02 = SecondVC()
         let view03 = ThirdVC()
         
-        tbC.setViewControllers([view01, view02, view03], animated: false)
+        nC1.setViewControllers([view01], animated: false)
+        nC2.setViewControllers([view02], animated: false)
+        nC3.setViewControllers([view03], animated: false)
+        
+        tbC.setViewControllers([nC1, nC2, nC3], animated: false)
         
         view01.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar"), selectedImage: nil)
         view02.tabBarItem = UITabBarItem(title: "File", image: UIImage(named: "file-tree"), selectedImage: nil)
