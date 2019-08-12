@@ -13,6 +13,12 @@ class ThirdVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setButton()
+//        self.alertGo((Any).self)
+        let csBtn = CSButton(frame: CGRect(x: 30, y: 100, width: 150, height: 30))
+        
+        let csBtn2 = CSButton()
+        csBtn2.frame = CGRect(x: 180, y: 100, width: 150, height: 30)
         
         let title = UILabel(frame: CGRect(x: 0, y: 130, width: 100, height: 30))
         
@@ -23,7 +29,9 @@ class ThirdVC: UIViewController {
         title.sizeToFit()
         title.center.x = self.view.frame.width / 2
         
-
+        self.view.addSubview(csBtn2)
+        self.view.addSubview(csBtn)
+        self.view.addSubview(title)
         // Do any additional setup after loading the view.
     }
     
