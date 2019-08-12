@@ -16,11 +16,11 @@ class ThirdVC: UIViewController {
         self.setButton()
 //        self.alertGo((Any).self)
         let csBtn = CSButton(type: .rect)
-        csBtn.frame = CGRect(x: 30, y: 100, width: 150, height: 30)
+        csBtn.frame = CGRect(x: 30, y: 500, width: 150, height: 30)
         csBtn.style = .circle
         
         let csBtn2 = CSButton(type: .circle)
-        csBtn2.frame = CGRect(x: 180, y: 100, width: 150, height: 30)
+        csBtn2.frame = CGRect(x: 230, y: 500, width: 150, height: 30)
         
         let title = UILabel(frame: CGRect(x: 0, y: 130, width: 100, height: 30))
         
@@ -35,6 +35,21 @@ class ThirdVC: UIViewController {
         self.view.addSubview(csBtn)
         self.view.addSubview(title)
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let tabBar = self.tabBarController?.tabBar
+        tabBar?.isHidden = (tabBar?.isHidden == true) ? false : true
+        
+        //        func exec() {
+        //            tabBar?.alpha = ( tabBar?.alpha == 1 ? 0: 1)
+        //        }
+        //
+        //        UIView.animate(withDuration: TimeInterval(0.3), animations: exec)
+        
+        UIView.animate(withDuration: TimeInterval(0.3) ) {
+            tabBar?.alpha = ( tabBar?.alpha == 0 ? 1 : 0)
+        }
     }
     
     func didSelectRowAt(indexPath: IndexPath) {

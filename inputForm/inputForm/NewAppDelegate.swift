@@ -14,7 +14,7 @@ class NewAPpDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let tbC = UITabBarController()
+        let tbC = CSTabBarController()
         tbC.view.backgroundColor = .white
         
         self.window?.rootViewController = tbC
@@ -42,6 +42,7 @@ class NewAPpDelegate: UIResponder, UIApplicationDelegate {
         tbItemProxy.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray], for: .disabled)
         tbItemProxy.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.red], for: .selected)
         tbItemProxy.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont.systemFont(ofSize: 15)], for: .normal)
+        
         
         return true
     }
