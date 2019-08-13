@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,9 +22,19 @@ class SecondVC: UIViewController {
         title.sizeToFit()
         title.center.x = self.view.frame.width / 2
         
-        self.view.addSubview(title)
+        let stepper = CSStepper()
         
+        stepper.frame = CGRect(x: 30, y: 300, width: 130, height: 30)
+        stepper.addTarget(self, action: #selector(logging(_:)), for: .valueChanged)
+        
+        self.view.addSubview(title)
+        self.view.addSubview(stepper)
         self.initTitleInput()
+    }
+    
+    @objc
+    func logging(_ sender: CSStepper) {
+        NSLog("현재 스태퍼의 값은 \(sender.value)입니다")
     }
     
     func initTitleInput() {

@@ -17,6 +17,13 @@
                     <view key="view" contentMode="scaleToFill" id="HJN-AG-Xaa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipn-8d-JGp" customClass="CSStepper" customModule="inputForm" customModuleProvider="target">
+                                <rect key="frame" x="63" y="458" width="284" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HE2-SC-Z7l"/>
                     </view>
@@ -24,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLt-pp-r6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5887" y="13"/>
+            <point key="canvasLocation" x="5886.9565217391309" y="12.723214285714285"/>
         </scene>
         <!--ThirdVC-->
         <scene sceneID="uu2-u6-Z7c">

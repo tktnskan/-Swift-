@@ -41,6 +41,7 @@
 		D17FA44D2301410F0054A2DE /* CSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17FA44C2301410F0054A2DE /* CSButton.swift */; };
 		D17FA44F230175F00054A2DE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17FA44E230175F00054A2DE /* test.swift */; };
 		D17FA451230183D10054A2DE /* CSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17FA450230183D10054A2DE /* CSTabBarController.swift */; };
+		D17FA453230237E70054A2DE /* CSStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17FA452230237E70054A2DE /* CSStepper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		D17FA44C2301410F0054A2DE /* CSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSButton.swift; sourceTree = "<group>"; };
 		D17FA44E230175F00054A2DE /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		D17FA450230183D10054A2DE /* CSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTabBarController.swift; sourceTree = "<group>"; };
+		D17FA452230237E70054A2DE /* CSStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSStepper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				D17FA44A23012D0D0054A2DE /* ListVC.swift */,
 				D17FA44623010E990054A2DE /* ImageVC.swift */,
 				D17FA440230107C60054A2DE /* MapKitVC.swift */,
+				D17FA452230237E70054A2DE /* CSStepper.swift */,
 				D17FA44C2301410F0054A2DE /* CSButton.swift */,
 				D17FA450230183D10054A2DE /* CSTabBarController.swift */,
 				D17FA3DD22FD14190054A2DE /* ReadViewController.swift */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17FA3CE22FD09B00054A2DE /* FirstVC.swift in Sources */,
+				D17FA453230237E70054A2DE /* CSStepper.swift in Sources */,
 				D17FA451230183D10054A2DE /* CSTabBarController.swift in Sources */,
 				D17FA44F230175F00054A2DE /* test.swift in Sources */,
 				D17FA3DE22FD14190054A2DE /* ReadViewController.swift in Sources */,
