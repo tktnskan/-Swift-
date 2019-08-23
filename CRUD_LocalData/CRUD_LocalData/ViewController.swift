@@ -12,7 +12,7 @@ class MyViewController: UITableViewController {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let cellId = "cellId"
-    
+    let alertController = UIAlertController(title: "Add New Item", message: "빈칸 채워", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,6 @@ class MyViewController: UITableViewController {
     
     @objc
     func addItem(_ sender: Any) {
-        let alertController = UIAlertController(title: "Add New Item", message: "빈칸 채워", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: savehaza)
         let selfinput = UIViewController()
         let input = UITextView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
@@ -40,7 +39,6 @@ class MyViewController: UITableViewController {
         alertController.setValue(selfinput, forKey: "contentViewController")
 
 //        alertController.view.addSubview(selfinput)
-        
         present(alertController, animated: false)
 
     }
