@@ -30,13 +30,13 @@ class MyViewController: UITableViewController {
     @objc
     func addItem(_ sender: Any) {
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: savehaza)
-        let selfinput = UIViewController()
-        let input = UITextView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        input.backgroundColor = .gray
+//        let selfinput = UIViewController()
+//        let input = UITextView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+//        input.backgroundColor = .gray
         alertController.addAction(saveAction)
-        selfinput.view = input
-        selfinput.preferredContentSize.height = 100
-        alertController.setValue(selfinput, forKey: "contentViewController")
+//        selfinput.view = input
+//        selfinput.preferredContentSize.height = 100
+//        alertController.setValue(selfinput, forKey: "contentViewController")
 
 //        alertController.view.addSubview(selfinput)
         present(alertController, animated: false)
