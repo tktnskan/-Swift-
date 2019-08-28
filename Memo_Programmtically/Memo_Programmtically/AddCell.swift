@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemoCell: UITableViewCell {
+class AddCell: UITableViewCell {
     var subject: UILabel = {
         let sj = UILabel()
         sj.textColor = .black

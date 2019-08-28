@@ -10,7 +10,7 @@ import UIKit
 
 class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var memocell = MemoCell()
+    var memocell = AddCell()
     
 
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class AddVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCont
             regdate: Date(),
             subject: "\(manager.listsize() + 1)번째 글: \(memocell.title.text!)"
         )
-//        data.image = memocell.img.image
+        data.image = memocell.img.image
 
         
         manager.save(d: data)

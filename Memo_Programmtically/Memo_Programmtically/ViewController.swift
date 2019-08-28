@@ -34,7 +34,7 @@ class MyViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = .black
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain
             , target: self, action: #selector(addItem))
-        tableView.register(Mycell.self, forCellReuseIdentifier: cellId)
+        tableView.register(ListCell.self, forCellReuseIdentifier: cellId)
     }
     
     @objc
@@ -47,24 +47,35 @@ class MyViewController: UITableViewController {
         return data.getlist().count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! Mycell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ListCell
         let item = data.getlist()[indexPath.row]
-        cell.textLabel?.text = item.subject
+//        cell.textLabel?.text = item.subject
+        cell.data = item
         return cell
     }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        appDelegate.memolist.remove(at: indexPath.row)
 //        tableView.reloadData()
+        let item = data.getlist()[indexPath.row]
+        print(item.contents)
+        print(item.subject)
+        
         let nextVC = DetailVC()
-        present(nextVC, animated: true)
+        nextVC.image.image = item.image
+        nextVC.navigationItem.title = item.subject
+        nextVC.label1.text = item.subject
+        nextVC.label2.text = item.contents
+        nextVC.label1.sizeToFit()
+        nextVC.label2.sizeToFit()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
-}
-
-class Mycell: UITableViewCell {
-    var title: String = ""
-    var titleImage: UIImageView?
 }
 
 

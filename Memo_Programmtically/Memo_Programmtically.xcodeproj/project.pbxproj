@@ -13,11 +13,11 @@
 		D17FA4902302F2440054A2DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17FA48F2302F2440054A2DE /* Assets.xcassets */; };
 		D17FA4932302F2440054A2DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17FA4912302F2440054A2DE /* LaunchScreen.storyboard */; };
 		D1A651822314A3BA009DDB52 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651812314A3BA009DDB52 /* AddVC.swift */; };
-		D1A651842314B273009DDB52 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651832314B273009DDB52 /* MemoCell.swift */; };
+		D1A651842314B273009DDB52 /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651832314B273009DDB52 /* AddCell.swift */; };
 		D1A651862314BEA6009DDB52 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651852314BEA6009DDB52 /* MemoData.swift */; };
 		D1A651882314C702009DDB52 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651872314C702009DDB52 /* DetailVC.swift */; };
 		D1A6518A2314E975009DDB52 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651892314E975009DDB52 /* DataManager.swift */; };
-		D1A6518C2314F6D6009DDB52 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6518B2314F6D6009DDB52 /* MainPresenter.swift */; };
+		D1A651B523153BA9009DDB52 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A651B423153BA9009DDB52 /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 		D17FA4922302F2440054A2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D17FA4942302F2440054A2DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A651812314A3BA009DDB52 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
-		D1A651832314B273009DDB52 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		D1A651832314B273009DDB52 /* AddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
 		D1A651852314BEA6009DDB52 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		D1A651872314C702009DDB52 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D1A651892314E975009DDB52 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		D1A6518B2314F6D6009DDB52 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		D1A651B423153BA9009DDB52 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +68,11 @@
 			children = (
 				D17FA4882302F2430054A2DE /* AppDelegate.swift */,
 				D17FA48A2302F2430054A2DE /* ViewController.swift */,
-				D1A6518B2314F6D6009DDB52 /* MainPresenter.swift */,
 				D1A651812314A3BA009DDB52 /* AddVC.swift */,
-				D1A651832314B273009DDB52 /* MemoCell.swift */,
-				D1A651852314BEA6009DDB52 /* MemoData.swift */,
 				D1A651872314C702009DDB52 /* DetailVC.swift */,
+				D1A651B423153BA9009DDB52 /* ListCell.swift */,
+				D1A651832314B273009DDB52 /* AddCell.swift */,
+				D1A651852314BEA6009DDB52 /* MemoData.swift */,
 				D1A651892314E975009DDB52 /* DataManager.swift */,
 				D17FA48C2302F2430054A2DE /* Main.storyboard */,
 				D17FA48F2302F2440054A2DE /* Assets.xcassets */,
@@ -155,11 +155,11 @@
 			files = (
 				D1A651822314A3BA009DDB52 /* AddVC.swift in Sources */,
 				D1A651862314BEA6009DDB52 /* MemoData.swift in Sources */,
-				D1A6518C2314F6D6009DDB52 /* MainPresenter.swift in Sources */,
 				D17FA48B2302F2430054A2DE /* ViewController.swift in Sources */,
 				D1A6518A2314E975009DDB52 /* DataManager.swift in Sources */,
 				D17FA4892302F2430054A2DE /* AppDelegate.swift in Sources */,
-				D1A651842314B273009DDB52 /* MemoCell.swift in Sources */,
+				D1A651B523153BA9009DDB52 /* ListCell.swift in Sources */,
+				D1A651842314B273009DDB52 /* AddCell.swift in Sources */,
 				D1A651882314C702009DDB52 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
