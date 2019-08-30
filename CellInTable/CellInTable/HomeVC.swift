@@ -8,49 +8,78 @@
 
 import UIKit
 
-class HomeVC: UITableViewController {
+class HomeVC: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
-    var randomTitle = ["1", "2", "3", "4", "5", "6"]
-    var randomContents = ["1번째입니다", "2번째입니다", "3번째입니다", "4번째입니다", "5번째입니다", "6번째입니다"]
+    let cccc = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    var tableViewcell: UITableViewCell!
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data2.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        
+        let item = data2[indexPath.row]
+        cell.page = item
+        
+        // Configure the cell
+        
+        return cell
+    }
+    
+
+    var data2 = DataManager().making().getting()
+//    var tableview: UITableView!
+    
+//
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//        hihi.making()
+//        data2 = hihi.getting()
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//    }
+//
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print(data2)
+        tableView.register(TVC.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.register(TVC2.self, forCellReuseIdentifier: "TableViewCell2")
         
-        tableView = UITableView(frame: self.view.bounds)
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.view.addSubview(tableView)
-        
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "NormalCell")
+        cccc.delegate = self
+        cccc.dataSource = self
+        cccc.layour
+        cccc.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+//        print("hihi")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "NormalCell")
     }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print("1111")
+//        print(data2)
+        return data2.count + 1
     }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+//        print("hi3")
+        return 100
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row == 3 {
-            let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath as IndexPath) as! TableViewCell
-            cell.backgroundColor = UIColor.groupTableViewBackground
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        print("hi")
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell2", for: indexPath) as! TVC2
+            cell.col = cccc
+//            let colcell = col.collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             return cell
-            
         } else {
-            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "NormalCell", for: indexPath as IndexPath)
-            cell.textLabel?.text = "cell: \(indexPath.row)"
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TVC
+            let item = data2[indexPath.row-1]
+            cell.data = item
             return cell
         }
+//        cell.backgroundColor = .red
+        
     }
 
 }

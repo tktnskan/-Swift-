@@ -9,12 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CellInTable/CollectionPage.swift"
-            timestampString = "588847220.700422"
+            filePath = "Memo_Programmtically/ViewController.swift"
+            timestampString = "588840412.075333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15">
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "MyViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

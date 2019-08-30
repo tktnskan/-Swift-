@@ -36,7 +36,7 @@ class MyViewController: UITableViewController {
             , target: self, action: #selector(addItem))
         tableView.register(ListCell.self, forCellReuseIdentifier: cellId)
     }
-    
+//
     @objc
     func addItem(_ sender: Any) {
         let nextVC = AddVC()
@@ -44,14 +44,17 @@ class MyViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("1111")
         return data.getlist().count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("22222")
         return 100
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("3333")
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ListCell
         let item = data.getlist()[indexPath.row]
 //        cell.textLabel?.text = item.subject
@@ -65,7 +68,7 @@ class MyViewController: UITableViewController {
         let item = data.getlist()[indexPath.row]
         print(item.contents)
         print(item.subject)
-        
+
         let nextVC = DetailVC()
         nextVC.image.image = item.image
         nextVC.navigationItem.title = item.subject

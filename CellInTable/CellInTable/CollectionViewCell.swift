@@ -9,7 +9,7 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    var page: Page? {
+    var page: Data? {
         didSet {
             title.text = page?.title
             contents.text = page?.contents
@@ -40,8 +40,8 @@ class CollectionViewCell: UICollectionViewCell {
     private func setupUI() {
         addSubview(title)
         addSubview(contents)
-        title.frame = CGRect(x: 5, y: 5, width: 30, height: 20)
-        contents.frame = CGRect(x: 5, y: 30, width: 30, height: 20)
+//        title.frame = CGRect(x: 5, y: 5, width: 30, height: 20)
+//        contents.frame = CGRect(x: 5, y: 30, width: 30, height: 20)
     }
     
     required init?(coder aDecoder: NSCoder) {
