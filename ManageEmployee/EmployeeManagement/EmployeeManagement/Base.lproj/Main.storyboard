@@ -13,7 +13,7 @@
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="HomeVC" customModule="EmployeeManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="EmployeeManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,11 +225,7 @@
                         <viewLayoutGuide key="safeArea" id="duJ-HI-8P4"/>
                     </view>
                     <navigationItem key="navigationItem" title="기본정보 입력" id="PbM-VX-GIe">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="yGh-hl-YQx">
-                            <connections>
-                                <action selector="back:" destination="omL-tE-o7c" id="R3o-va-BWA"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="yGh-hl-YQx"/>
                     </navigationItem>
                     <connections>
                         <outlet property="nextPage" destination="i8s-Gl-zQ8" id="tv6-Sq-MCp"/>
@@ -406,6 +402,7 @@
         <!--First PageVC-->
         <scene sceneID="27X-rO-31e">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSb-4q-p7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="firstPage" id="Rdj-4v-gSE" customClass="FirstPageVC" customModule="EmployeeManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fa-xw-ol5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -433,7 +430,6 @@
                         <viewLayoutGuide key="safeArea" id="P2V-J6-JiQ"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MSb-4q-p7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4775" y="137"/>
         </scene>

@@ -9,10 +9,11 @@
 import UIKit
 
 class FirstPageVC: UIViewController {
-
+    
+    @IBOutlet weak var tabBar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DD451D12324CF880045F68C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D02324CF880045F68C /* AppDelegate.swift */; };
-		1DD451D32324CF880045F68C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D22324CF880045F68C /* HomeVC.swift */; };
+		1DD451D32324CF880045F68C /* SignUpPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D22324CF880045F68C /* SignUpPageVC.swift */; };
 		1DD451D92324CF880045F68C /* EmployeeManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DD451D72324CF880045F68C /* EmployeeManagement.xcdatamodeld */; };
 		1DD451DB2324CF890045F68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DD451DA2324CF890045F68C /* Assets.xcassets */; };
 		1DD451DE2324CF890045F68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD451DC2324CF890045F68C /* LaunchScreen.storyboard */; };
@@ -26,7 +26,7 @@
 		088B18734DB0BC26883B40D5 /* Pods_EmployeeManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmployeeManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD451CD2324CF880045F68C /* EmployeeManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD451D02324CF880045F68C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DD451D22324CF880045F68C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		1DD451D22324CF880045F68C /* SignUpPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageVC.swift; sourceTree = "<group>"; };
 		1DD451D82324CF880045F68C /* EmployeeManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeManagement.xcdatamodel; sourceTree = "<group>"; };
 		1DD451DA2324CF890045F68C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DD451DD2324CF890045F68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,15 +82,14 @@
 		1DD451CF2324CF880045F68C /* EmployeeManagement */ = {
 			isa = PBXGroup;
 			children = (
+				D1C201472329FDA800280203 /* FirstPage */,
 				D1C201382324D16200280203 /* SignUp */,
 				1DD451D02324CF880045F68C /* AppDelegate.swift */,
-				1DD451D22324CF880045F68C /* HomeVC.swift */,
 				1DD451DA2324CF890045F68C /* Assets.xcassets */,
 				1DD451E52324CFBE0045F68C /* Main.storyboard */,
 				1DD451DC2324CF890045F68C /* LaunchScreen.storyboard */,
 				1DD451DF2324CF890045F68C /* Info.plist */,
 				1DD451D72324CF880045F68C /* EmployeeManagement.xcdatamodeld */,
-				D1C201432324EAA300280203 /* FirstPageVC.swift */,
 			);
 			path = EmployeeManagement;
 			sourceTree = "<group>";
@@ -106,12 +105,21 @@
 		D1C201382324D16200280203 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				1DD451D22324CF880045F68C /* SignUpPageVC.swift */,
 				D1C201392324D19F00280203 /* BasicInfoVC.swift */,
 				D1C2013F2324DBCE00280203 /* SelectPostionVC.swift */,
 				D1C201412324E85E00280203 /* extraInfoVC.swift */,
 				D1C201452327599000280203 /* NewUserInfo.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D1C201472329FDA800280203 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				D1C201432324EAA300280203 /* FirstPageVC.swift */,
+			);
+			path = FirstPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DD451D32324CF880045F68C /* HomeVC.swift in Sources */,
+				1DD451D32324CF880045F68C /* SignUpPageVC.swift in Sources */,
 				D1C201462327599000280203 /* NewUserInfo.swift in Sources */,
 				D1C201422324E85E00280203 /* extraInfoVC.swift in Sources */,
 				1DD451D12324CF880045F68C /* AppDelegate.swift in Sources */,
